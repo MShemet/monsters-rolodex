@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import Card from '../card/card.component';
 
 class CardList extends Component {
   render() {
@@ -6,9 +7,9 @@ class CardList extends Component {
 
     return (
       <div>
-        {monsters.map((monster) => {
-          return <h1 key={monster.id}>{monster.name}</h1>;
-        })}
+        {monsters.map((monster) => (
+          <Card monster={monster} />
+        ))}
       </div>
     );
   }
